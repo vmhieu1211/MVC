@@ -3,7 +3,6 @@
 
 if(!defined('APP_PATH')){
     die("cannot access");
-
 }
 
 
