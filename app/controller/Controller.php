@@ -18,7 +18,6 @@ class Controller
 
     protected function loadHeader($header =[])
     {    
-        $header['sessionUser'] = $this->getSessionUsername();
         return $this->loadView('partials/header_view',$header);
     }
 
