@@ -1,7 +1,7 @@
 <?php
  namespace app\controller;
 
- class HomeController extends Controller
+ class AboutController extends Controller
 {
     //ten file va ten class phai giong nhau
     public function index()
