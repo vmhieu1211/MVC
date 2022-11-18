@@ -11,9 +11,9 @@ if(!defined('APP_PATH')){
 // m: phuong thuc nam trong controller
 // su dung ky thuat lazy loading (ten file va class giong nhau)
 // trong 1 file chi nen chua 1 class
-$c = ucfirst($_GET['c'] ?? 'login'); // controller mac dinh ten la login
+$c = ucfirst($_GET['c'] ?? 'home'); // controller mac dinh ten la login
 // ucfirst : viet hoa chu cai dau tien trong chuoi (Login)
-$m = $_GET['m'] ?? 'index'; 
+$m = $_GET['m'] ?? 'dashboard'; 
 
 //ten controller
 $nameController = "{$c}Controller"; // chinh la ten file
