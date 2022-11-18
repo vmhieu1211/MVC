@@ -7,7 +7,7 @@
             "config/app.php",
             "config/const.php",
             "config/database.php",
-            "app/helper/common.php"
+            "helper/common.php"
         ]
     },
     "require": {

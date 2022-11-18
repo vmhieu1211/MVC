@@ -12,7 +12,7 @@
             'title' => 'Home page',
         ]);
         //load view
-        $this->loadView('home/index_view');
+        $this->loadView('about/index_view');
 
         //loadfooter
         $this->loadFooter();

@@ -7,7 +7,7 @@ class Controller
 
     public function __construct()
     {   
-        $this->rootPathView = PATH_APP_VIEW;
+        $this->rootPathView = ADMIN_PATH_APP_VIEW;
     }
 
     protected function getSessionUsername()

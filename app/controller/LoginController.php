@@ -48,5 +48,21 @@ class LoginController extends Controller
                 return redirect('login','index',['state'=>'fail']);
             }
         }
+        
+    }
+    public function logout()
+    {
+        if(isset($_POST['btnLogout']))
+        {
+            //xoa session
+            if(isset($_SESSION['username']))
+            {
+                unset($_SESSION['username']);
+            }
+        //previous link url
+        header("Location: ".$_SERVER['HTTP_REFERER']);
+        }
     }
 }
+
+    

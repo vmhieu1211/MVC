@@ -40,15 +40,16 @@
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
-                    <a style="margin: 0px 10px" href="javascript:void(0)">Hi : <?= $sessionUser;?></a>
-                    
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                         Logout
-                        </button>
-                    </form>
-                    <a href="<?= route('login','index');?>" class="btn btn-outline-dark">Login</a>
-
+                    <?php if(getUsername()):?>
+                        <a style="margin: 0px 10px" href="javascript:void(0)">Hi : <?= getUsername();?></a>
+                        <form method="POST" action="<?=route('login','logout');?>" class="d-flex">
+                            <button class="btn btn-outline-dark" type="submit" name="btnLogout">
+                            Logout
+                            </button>
+                        </form>
+                        <?php else:?>
+                        <a href="<?= route('login','index');?>" class="btn btn-outline-dark">Login</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </nav>
