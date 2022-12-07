@@ -1,7 +1,7 @@
 <?php
 namespace admin\app\controller;
 
-use admin\app\controller;
+use admin\app\controller\Controller;
 
 class DashboardController extends Controller
 {
@@ -9,6 +9,7 @@ class DashboardController extends Controller
     {
         parent::__construct();
     }
+
     public function index()
     {
         return $this->loadView('dashboard/index_view');

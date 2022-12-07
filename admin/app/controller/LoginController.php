@@ -55,4 +55,16 @@ class LoginController extends Controller
             }
         }
     }
+    public function logout()
+    {
+        if(isset($_POST['logout'])){
+            unset($_SESSION['user_id']);
+            unset($_SESSION['username']);
+            unset($_SESSION['password']);
+            unset($_SESSION['email']);
+            unset($_SESSION['phone']);
+            unset($_SESSION['role_id']);
+            return redirect('login','index');
+        }
+    }
 }
