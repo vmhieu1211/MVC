@@ -1,2 +1,6 @@
 <?php
-const DB_HOST = "127.0.0.1";
+const DB_CONNECTION = "mysql";
+const DB_HOST = "localhost";
+const DB_NAME = "education";
+const DB_USERNAME = "root";
+const DB_PASSWORD = "";

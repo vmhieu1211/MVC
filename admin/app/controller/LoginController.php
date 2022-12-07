@@ -1,7 +1,7 @@
 <?php
-namespace app\controller;
+namespace admin\app\controller;
 
-use app\controller\Controller;
+use admin\app\controller\Controller;
 
 class LoginController extends Controller
 {
