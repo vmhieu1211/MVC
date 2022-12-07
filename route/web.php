@@ -19,13 +19,13 @@ $nameController = "{$c}Controller"; // chinh la ten file
 //ten file
 $fileController = "{$nameController}.php";
 // full path file controller
-$fullPathController = NAMESPACE_CONTROLLER.$fileController;
+$fullPathController = ADMIN_NAMESPACE_CONTROLLER.$fileController;
 $fullRealPathController = str_replace("\\","/",$fullPathController);
 
 // lam the nao khoi tao dc doi tuong controller
 if(file_exists($fullRealPathController)){
     // tu dong khoi tao doi tuong
-    $controller = NAMESPACE_CONTROLLER.$nameController;
+    $controller = ADMIN_NAMESPACE_CONTROLLER.$nameController;
     // app\controller\LoginController
     $obj = new $controller; // new app\controller\LoginController
     // tu dong goi phuong thuc trong class

@@ -19,7 +19,7 @@ $nameController = "{$c}Controller"; // chinh la ten file
 //ten file
 $fileController = "{$nameController}.php";
 // full path file controller
-$fullPathController = ADMIN_NAMESPACE_CONTROLLER.$fileController;
+$fullPathController = NAMESPACE_CONTROLLER.$fileController;
 $fullRealPathController = str_replace("\\","/",$fullPathController);
 
 // lam the nao khoi tao dc doi tuong controller
