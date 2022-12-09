@@ -12,6 +12,13 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return $this->loadView('dashboard/index_view');
+       
+        $header =[
+            'title' =>'Dashboard page'
+        ];
+        $this->loadHeader($header);
+        $this->loadView('dashboard/index_view');
+        $this->loadFooter();
+        
     }
 }

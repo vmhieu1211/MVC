@@ -7,4 +7,4 @@ const PATH_PUBLIC_ADMIN ='../public/';
 
 const ADMIN_APP_PATH = 'index.php';
 const ADMIN_NAMESPACE_CONTROLLER = 'admin\\app\\controller\\';
-const ADMIN_PATH_APP_VIEW = 'app/view/';
+const ADMIN_PATH_APP_VIEW = 'app/views/';
