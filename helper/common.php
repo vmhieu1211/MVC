@@ -31,9 +31,15 @@ if(!function_exists('asset')){
         //goi duong dan file ngoai view
         //xu ly load moi thu trong thu muc public
         if($pathFile !== null){
-            if($isAdmin)
-            if(file_exists(PATH_PUBLIC_ADMIN . $pathFile)){
-                return PATH_PUBLIC_ADMIN . $pathFile;
+            if($isAdmin) {
+                if(file_exists(PATH_PUBLIC_ADMIN . $pathFile)){
+                    return PATH_PUBLIC_ADMIN . $pathFile;
+                }
+            }
+            else {
+                if(file_exists(PATH_PUBLIC. $pathFile)){
+                    return PATH_PUBLIC . $pathFile;
+                }
             }
         }
     }
