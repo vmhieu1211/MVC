@@ -16,11 +16,28 @@ class RoleController extends Controller
 
     public function index()
     {
-        return $this->loadView('roles/index_view');
+        //vao model : viet ham getDataRolePaging lay all data
+        //do ra du lieu ra ngoai view
+        $listRoles = $this->roleModel->getDataRolePaging();
+        $header =[
+            'title'=>'Role page'
+        ];
+        $this->loadHeader($header);
+        $this->loadView('roles/index_view',[
+            'roles'=> $listRoles
+        ]);
+        $this->loadFooter();
+        
     }
     public function create()
     {
-        return $this->loadView('roles/create_view');
+        $header =[
+            'title'=>'Create role page'
+        ];
+        $this->loadHeader($header);
+        $this->loadView('roles/create_view');
+        $this->loadFooter();
+        
     }
 
     public function store()
@@ -52,6 +69,22 @@ class RoleController extends Controller
                 return redirect('role','create');
             }
         }
-        
+    }
+    public function edit()
+    {
+        $id = $_GET['id'] ?? null;
+        $id = is_numeric($id)? $id : 0;
+        // lay chi tiet du lieu cua vai tro theo id
+        $info = $this->roleModel->getDataRoleById($id);
+        // load view edit - do du lieu ra
+        // view edit giong nhu view create 
+        // thuc hien update
+        // public function 
+    }
+
+    public function update()
+    {
+         $id = $_GET['id'] ?? null;
+        $id = is_numeric($id)? $id : 0;
     }
 }
